@@ -1,4 +1,5 @@
 import React, { useContext } from 'react'
+import ItemCard from '../components/ItemCard';
 import { ProductsContext } from '../contexts/ProductsContext';
 
 const MensClothing = () => {
@@ -19,11 +20,14 @@ const MensClothing = () => {
             <h1>Men's Products</h1>
             <ul>
                 {products.filter(function (product){
-                    return product.category === "Men's Clothing"
+                    return product.category === "men's clothing"
                 }).map((product) => (
-                    <li>
-                        <h2>{product.title}</h2>
-                    </li>
+                    <ItemCard 
+                        title={product.title}
+                        image={product.image}
+                        category={product.category}
+                        price={product.price}
+                    />
                 ))}
             </ul>
         </div>
