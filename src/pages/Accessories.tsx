@@ -1,5 +1,6 @@
 import React, { useContext } from 'react'
 import ItemCard from '../components/ItemCard';
+import ItemsView from '../components/ItemsView';
 import { ProductsContext } from '../contexts/ProductsContext';
 
 const Accessories = () => {
@@ -14,26 +15,20 @@ const Accessories = () => {
       return <div>Error: {error.message}</div>
   }
 
-  return (
-    <>
-    <div>
-        <h1>Accessories</h1>
-        <ul>
-            {products.filter(function (product){
-                return product.category === "jewelery"
-            }).map((product) => (
-                <ItemCard 
-                    title={product.title}
-                    image={product.image}
-                    category={product.category}
-                    price={product.price}
-                />
-            ))}
-        </ul>
-    </div>
-    </>
-  )
-  
+  const accessories = products.filter(function (product){
+    return product.category === "jewelery"
+})
+
+    return (
+        <>
+        <div>
+            <h1>Womens's Products</h1>
+            <ul>
+                <ItemsView products={accessories}/>
+            </ul>
+        </div>
+        </>
+    )
 }
 
 export default Accessories

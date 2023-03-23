@@ -7,7 +7,7 @@ type Rating = {
   rating: number
 }
 
-type Product = {
+export type Product = {
   category: string
   description: string
   id: number
@@ -15,6 +15,7 @@ type Product = {
   price: number
   rating: Rating
   title: string
+  slug: string
 }
 
 type ProductsContextValue = {
@@ -49,8 +50,6 @@ export const ProductsProvider = ({ children }: { children: React.ReactNode }) =>
   }, []);
 
   const value = { products, loading, error }
-
-  console.log(products)
 
   return <ProductsContext.Provider value={value}>{children}</ProductsContext.Provider>;
 }
