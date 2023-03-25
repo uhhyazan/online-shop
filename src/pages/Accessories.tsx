@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
-import ItemCard from '../components/ItemCard';
 import ItemsView from '../components/ItemsView';
+import Title from '../components/Title';
 import { ProductsContext } from '../contexts/ProductsContext';
 
 const Accessories = () => {
@@ -22,10 +22,8 @@ const Accessories = () => {
     return (
         <>
         <div>
-            <h1>Womens's Products</h1>
-            <ul>
-                <ItemsView products={accessories}/>
-            </ul>
+            <Title text='Accessories' />
+            <ItemsView products={accessories}/>
         </div>
         </>
     )

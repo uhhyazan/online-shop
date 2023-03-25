@@ -13,7 +13,7 @@ const getAllProducts = async () => {
     }
 }
 
-const getProduct = async (product: string) => {
+const getProduct = async (product: number) => {
     try {
       const response = await axios.get((apiURL + '/' + product));
       const products = response.data;

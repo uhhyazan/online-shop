@@ -1,5 +1,6 @@
 import React, { useContext } from 'react'
 import ItemsView from '../components/ItemsView';
+import Title from '../components/Title';
 import { ProductsContext } from '../contexts/ProductsContext';
 
 const WomensClothing = () => {
@@ -21,10 +22,8 @@ const WomensClothing = () => {
   return (
     <>
     <div>
-        <h1>Womens's Products</h1>
-        <ul>
-            <ItemsView products={womensProducts}/>
-        </ul>
+        <Title text="Women" />
+        <ItemsView products={womensProducts}/>
     </div>
     </>
   )

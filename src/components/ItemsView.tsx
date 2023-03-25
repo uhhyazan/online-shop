@@ -24,13 +24,14 @@ const ItemsView = ({products}: ItemsViewProps) => {
         <Grid 
             container   
             direction="row"
-            justifyContent="flex-start"
+            justifyContent="center"
             alignItems="flex-start"
         >
             {products.map((product) => (
                 <Grid>
                     <ListItem>
                     <ItemCard 
+                        id={product.id}
                         title={product.title}
                         image={product.image}
                         category={product.category}

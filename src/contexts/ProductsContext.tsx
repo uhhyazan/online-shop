@@ -4,7 +4,7 @@ import { getAllProducts } from '../services/product';
 
 type Rating = {
   count: number
-  rating: number
+  rate: number
 }
 
 export type Product = {
