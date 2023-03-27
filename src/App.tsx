@@ -6,6 +6,8 @@ import WomensClothing from './pages/WomensClothing';
 import Accessories from './pages/Accessories';
 import { ProductsProvider } from './contexts/ProductsContext';
 import ItemPage from './pages/ItemPage';
+import Footer from './components/Footer';
+import ShoppingCart from './pages/ShoppingCart';
 
 function App() {
   return (
@@ -19,8 +21,10 @@ function App() {
           <Route path="/womens" element={<WomensClothing />} />
           <Route path="/accessories" element={<Accessories />} />
           <Route path="/items/:id" element={<ItemPage />} />
+          <Route path="/cart" element={<ShoppingCart />} />
         </Routes>
         </ProductsProvider>
+        <Footer />
       </div>
     </BrowserRouter>
   );

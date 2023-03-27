@@ -22,13 +22,14 @@ const ItemPage = () => {
 
   return (
     <Box sx={{ padding: 4 }}>
-      <Grid container spacing={4}>
+      <Grid container spacing={1} sx={{justifyItems: "center"}}>
         <Grid item xs={12} md={6}>
-          <Card sx={{ width: "100%" }}>
+          <Card sx={{ width: "50%" }}>
             <CardMedia
               component="img"
               image={product.image}
               alt={product.title}
+              sx={{alignItems: "center"}}
             />
           </Card>
         </Grid>
@@ -43,7 +44,7 @@ const ItemPage = () => {
           <Typography variant="subtitle1" sx={{ marginBottom: 4 }}>
             {product.description}
           </Typography>
-          <Typography variant="h5" color="primary" sx={{ marginBottom: 2 }}>
+          <Typography variant="h5" sx={{ marginBottom: 2 }}>
             ${product.price.toFixed(2)}
           </Typography>
           <Box sx={{ display: "flex", alignItems: "center" }}>

@@ -40,7 +40,13 @@ export const ProductsProvider = ({ children }: { children: React.ReactNode }) =>
   useEffect(() => {
     getAllProducts()
       .then((products) => {
-        setProducts(products);
+        const filteredProducts = products.filter(
+          (product: Product) =>
+            product.category === "men's clothing" ||
+            product.category === "women's clothing" ||
+            product.category === "jewelery"
+        );
+        setProducts(filteredProducts);
         setLoading(false);
       })
       .catch((error) => {

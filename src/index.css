@@ -11,3 +11,10 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@font-face {
+  font-family: 'Saint-Carell';
+  src: url('/public/fonts/SaintCarellClean_PERSONAL_USE_ONLY.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
