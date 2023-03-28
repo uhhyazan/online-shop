@@ -8,23 +8,32 @@ const FeaturedProducts = () => {
   const randomProduct = products[Math.floor(Math.random() * products.length)];
 
   return (
-    <Box sx={{ backgroundColor: "#f4f4f4", py: 4 }}>
+    <Box sx={{ py: 1 }}>
       <Container maxWidth="lg">
         <Grid container spacing={4} alignItems="center">
           <Grid item xs={12} md={6}>
-            <Box sx={{ textAlign: "center" }}>
-              <Typography variant="h5" gutterBottom>
+            <Box sx={{ textAlign: "center", marginRight: 5 }}>
+              <Typography
+                variant="h6"
+                gutterBottom
+                sx={{ fontFamily: "Louis-George-Bold" }}
+              >
                 Introducing
               </Typography>
-              <Typography variant="h4" gutterBottom>
+              <Typography variant="h5" gutterBottom>
                 {randomProduct?.title}
               </Typography>
               <Button
-                variant="contained"
+                variant="outlined"
                 color="primary"
-                href={`/product/${randomProduct?.id}`}
+                href={`/items/${randomProduct?.id}`}
+                sx={{ width: 1 }}
               >
-                Shop Now
+                <Typography
+                  sx={{ color: "black", fontFamily: "Louis-George-Bold" }}
+                >
+                  Shop Now
+                </Typography>
               </Button>
             </Box>
           </Grid>

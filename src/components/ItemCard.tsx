@@ -25,8 +25,8 @@ const ItemCard = ({id, title, image, category, price}: ItemCardProps) => {
                 {title} 
               </Typography>
             </Link>
-            <Typography variant="body1" color="text.secondary" sx={{ width: "100%", justifyContent: "space-between"}}>
-              ${price.toFixed(2)} {category}
+            <Typography variant="body1" sx={{ width: "100%", display: 'flex', justifyContent: "right"}}>
+              ${price.toFixed(2)}
             </Typography>
           </CardContent>
         </Card>

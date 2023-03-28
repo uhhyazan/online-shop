@@ -13,12 +13,16 @@ import { ProductsContext } from "../contexts/ProductsContext";
 
 const ItemPage = () => {
   const { id } = useParams<{ id: string }>();
-  const { products } = useContext(ProductsContext);
+  const { products, addToCart } = useContext(ProductsContext);
   const product = products.find((p) => p.id === parseInt(id || ""));
 
   if (!product) {
     return <Typography variant="h6">Product not found.</Typography>;
   }
+
+  const handleAddToCart = () => {
+    addToCart(product)
+  } 
 
   return (
     <Box sx={{ padding: 4 }}>
@@ -48,7 +52,7 @@ const ItemPage = () => {
             ${product.price.toFixed(2)}
           </Typography>
           <Box sx={{ display: "flex", alignItems: "center" }}>
-            <Button variant="contained" size="large" sx={{ marginRight: 2 }}>
+            <Button onClick={() => handleAddToCart()} variant="contained" size="large" sx={{ marginRight: 2 }}>
               Add to cart
             </Button>
           </Box>

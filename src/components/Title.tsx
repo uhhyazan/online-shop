@@ -9,6 +9,7 @@ const useStyles = {
     textAlign: 'center',
     paddingTop: 4,
     paddingBottom: 4,
+    fontFamily: 'Louis-George-Bold'
 }
 
 const Title: React.FC<TitleProps> = ({ text }) => {

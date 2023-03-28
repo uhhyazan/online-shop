@@ -1,9 +1,9 @@
 import React from 'react';
-import { Box, Typography, Button } from '@mui/material';
+import { Box } from '@mui/material';
 import { styled } from '@mui/system';
 
 const HeroContainer = styled(Box)`
-  background-image: url('/images/pexels-andrea-piacquadio-987209.jpg');
+  background-image: url('/images/pexels-ron-lach-10143338.jpg');
   background-size: cover;
   background-position: center;
   height: 100vh;
