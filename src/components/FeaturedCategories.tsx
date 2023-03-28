@@ -1,9 +1,6 @@
 import React from "react";
 import {
   Box,
-  Button,
-  Container,
-  Grid,
   ImageList,
   ImageListItem,
   Typography,

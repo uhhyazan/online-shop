@@ -109,10 +109,10 @@ const Navigation: React.FC<NavProps> = ({ className }) => {
               <IconButton>
                 <ShoppingCartOutlinedIcon />
                 {cartItems.length > 0 && (
-                  <Typography
-                    variant="subtitle1"
-                    sx={{}}>{cartItems.length}</Typography>)}
-
+                  <Typography variant="subtitle1" sx={{}}>
+                    {cartItems.length}
+                  </Typography>
+                )}
               </IconButton>
             </Link>
           </Toolbar>
@@ -130,13 +130,13 @@ const Navigation: React.FC<NavProps> = ({ className }) => {
           </Button>
           {renderMenuItems()}
           <Divider />
-        <Box sx={{ padding: 2 }}>
-          <Typography>Sustainability</Typography>
-          <Typography>Stores</Typography>
-          <Typography>Ship to: United States</Typography>
-          <Typography>Can we help you?</Typography>
-          <Typography>+1.555.STILISTA</Typography>
-        </Box>
+          <Box sx={{ padding: 2 }}>
+            <Typography>Sustainability</Typography>
+            <Typography>Stores</Typography>
+            <Typography>Ship to: United States</Typography>
+            <Typography>Can we help you?</Typography>
+            <Typography>+1.555.STILISTA</Typography>
+          </Box>
         </Box>
       </Drawer>
     </React.Fragment>
